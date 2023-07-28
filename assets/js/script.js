@@ -1,6 +1,4 @@
-'use strict';
-
-
+"use strict";
 
 /**
  * add event on elements
@@ -14,9 +12,7 @@ const addEventOnElem = function (elem, type, callback) {
   } else {
     elem.addEventListener(type, callback);
   }
-}
-
-
+};
 
 /**
  * navbar toogle
@@ -29,11 +25,9 @@ const overlay = document.querySelector("[data-overlay]");
 const toggleNavbar = function () {
   navbar.classList.toggle("active");
   overlay.classList.toggle("active");
-}
+};
 
 addEventOnElem(navTogglers, "click", toggleNavbar);
-
-
 
 /**
  * active header & back top btn when window scroll down to 100px
@@ -50,11 +44,9 @@ const activeElemOnScroll = function () {
     header.classList.remove("active");
     backTopBtn.classList.remove("active");
   }
-}
+};
 
 addEventOnElem(window, "scroll", activeElemOnScroll);
-
-
 
 /**
  * filter functionality
@@ -77,6 +69,6 @@ const filter = function () {
       filterItems[i].style.display = "none";
     }
   }
-}
+};
 
 addEventOnElem(filterBtn, "click", filter);
